@@ -11,6 +11,6 @@ public class AnnotationDemoApp
     	
     	//call a method on the bean
     	
-    	//close the context
+    	//close the contexts
     }
 }
