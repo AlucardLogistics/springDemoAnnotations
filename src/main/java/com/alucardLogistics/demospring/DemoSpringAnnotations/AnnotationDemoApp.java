@@ -13,6 +13,9 @@ public class AnnotationDemoApp
     	Coach theCoach = context.getBean("soccerCoach", SoccerCoach.class);
     	//curlingCoach @Component has a custom ID
     	Coach curlingCoach = context.getBean("CurlingForLife", CurlingCoach.class);
+    	Coach pingPongCoach = context.getBean("pingPongCoach", PingPongCoach.class);
+    	
+    	PingPongCoach pipoCoach = context.getBean("pingPongCoach", PingPongCoach.class);
     	
     	//call a method on the bean
     	System.out.println("AnnotationDemoApp: Scanned the class components trough the package.");
@@ -22,6 +25,11 @@ public class AnnotationDemoApp
     	//call method to get the daily fortune
     	System.out.println("theCoach fortune service autowired -> " + theCoach.getDailyFortune());
     	System.out.println("curlingCoach fortune service autowired -> " + curlingCoach.getDailyFortune());
+    	System.out.println("pingPongCoach: " + pingPongCoach.getDailyFortune());
+    	
+    	//use @Value annotation
+    	System.out.println("pipoCoach email: " + pipoCoach.getEmail());
+    	System.out.println("pipoCoach team: " + pipoCoach.getTeam());
     	
     	
     	//close the contexts

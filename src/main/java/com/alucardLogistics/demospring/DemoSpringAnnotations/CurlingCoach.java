@@ -1,6 +1,7 @@
 package com.alucardLogistics.demospring.DemoSpringAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("CurlingForLife")
@@ -21,6 +22,7 @@ public class CurlingCoach implements Coach {
 	
 //	setter injection
 	@Autowired
+	@Qualifier("randomFortuneService")
 	public void setCurlingMove(FortuneService theFortuneService) {
 		System.out.println(">> CurlingCoach: @Autowired setCurlingMove() << will look for any class that implements FortuneService interface");
 		fortuneService = theFortuneService;

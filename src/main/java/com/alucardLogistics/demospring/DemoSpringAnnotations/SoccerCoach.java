@@ -1,6 +1,7 @@
 package com.alucardLogistics.demospring.DemoSpringAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //in @Component the default bean ID will be class name with lower case 'soccerCoach'
@@ -9,6 +10,7 @@ public class SoccerCoach implements Coach {
 	
 //	field injection
 	@Autowired
+	@Qualifier("RESTFortuneService") //for multiple implementations of fortuneService interface give the one implementation class desired to use
 	private FortuneService fortuneService;
 	
 	//define a default constructor
