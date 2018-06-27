@@ -15,9 +15,13 @@ public class AnnotationDemoApp
     	Coach curlingCoach = context.getBean("CurlingForLife", CurlingCoach.class);
     	
     	//call a method on the bean
-    	System.out.println("Scanned the class components trough the package.");
+    	System.out.println("AnnotationDemoApp: Scanned the class components trough the package.");
     	System.out.println("theCoach: " + theCoach.getDailyWorkout());
     	System.out.println("curlingCoach: " + curlingCoach.getDailyWorkout());
+    	
+    	//call method to get the daily fortune
+    	System.out.println("theCoach fortune service autowired -> " + theCoach.getDailyFortune());
+    	System.out.println("curlingCoach fortune service autowired -> " + curlingCoach.getDailyFortune());
     	
     	
     	//close the contexts
