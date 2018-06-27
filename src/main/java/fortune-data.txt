@@ -1,0 +1,5 @@
+FileFortuneService: Today is your lucky day.
+FileFortuneService: Never give up.
+FileFortuneService: Beware of the wolf.
+FileFortuneService: An apple a day keeps the doctor away.
+FileFortuneService: A bird in hand is better than two in a bush.

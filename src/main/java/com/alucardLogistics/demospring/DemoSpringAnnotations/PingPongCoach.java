@@ -17,7 +17,7 @@ public class PingPongCoach implements Coach {
 //	constructor injection
 //	qualifier goes in the constructor arguments
 	@Autowired
-	public PingPongCoach(@Qualifier("happyFortuneService") FortuneService theFortuneService) {
+	public PingPongCoach(@Qualifier("fileFortuneService") FortuneService theFortuneService) {
 		this.fortuneService = theFortuneService;		
 	}
 	
