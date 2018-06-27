@@ -2,10 +2,12 @@ package com.alucardLogistics.demospring.DemoSpringAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //in @Component the default bean ID will be class name with lower case 'soccerCoach'
 @Component
+@Scope("prototype")
 public class SoccerCoach implements Coach {
 	
 //	field injection
@@ -15,7 +17,8 @@ public class SoccerCoach implements Coach {
 	
 	//define a default constructor
 	public SoccerCoach() {
-		System.out.println(">> SoccerCoach: default constructor <<");
+		System.out.println(">> SoccerCoach: default constructor prototype <<");
+		System.out.println("NOtE: SoccerCoach: if prototype scope, it will not call @PreDestroy annotation <<");
 	}
 
 //	NOTE
